@@ -1,5 +1,8 @@
 import cv2
 import numpy as np
+from PyQt6.QtWidgets import QApplication, QWidget
+
+# Initialize window using PyQt6
 
 # Connect to Theta V (port 3 on Jaechan's computer)
 capture = cv2.VideoCapture(3)
