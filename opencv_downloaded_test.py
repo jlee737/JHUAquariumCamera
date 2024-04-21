@@ -2,7 +2,7 @@ import cv2
 import cv2.fisheye
 import numpy as np
 
-capture = cv2.VideoCapture('video360_test.mp4')
+capture = cv2.VideoCapture('This PC\RICOH THETA V\Fixed storage\DCIM\100RICOH')
 
 while capture.isOpened():
     ret, frame = capture.read()
