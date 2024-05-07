@@ -33,7 +33,7 @@ joystick.start()
 capture = cv2.VideoCapture("thetauvcsrc mode=2K ! h264parse ! decodebin ! videoconvert ! video/x-raw,format=BGRx ! videoconvert ! video/x-raw,format=BGR ! queue ! appsink")
 
 # Play Pre-recorded Video
-#capture = cv2.VideoCapture(r"C:\Users\jclee\Downloads\Rivervideo360 - Made with Clipchamp.mp4")
+#capture = cv2.VideoCapture(r"/home/aquariscope/Desktop/Rivervideo360 - Made with Clipchamp.mp4")
 
 if not capture.isOpened():
     print("Cannot open camera")
