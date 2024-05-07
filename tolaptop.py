@@ -5,13 +5,15 @@ import time
 joy = joystick.Joystick()
 joy.start()
 
+# Connect to Laptop
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 	ip = '0.0.0.0'
 	port = 5005
 	address = (ip, port)
 
 	s.bind(address)
-	
+
+	# If connected, send encoding of Joystick outputs
 	while True:
 		s.listen(1)
 		conn, remote_addr = s.accept()
