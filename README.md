@@ -76,4 +76,7 @@ Recorded footage
   
 5. Upgraded resolution:
    - To me, the biggest upgrade that could be made to this exhibit would be increasing the resolution of the camera. The camera supports 4K resolution, but I found that the Raspberry Pi processer is too slow to display the 4K resolution which is why the software is currently configured for 2K video. At 4K, the frame rate of the footage becomes very slow, decreasing to somewhere between 2-10 frames per second. The resolution itself is very easy to change; simply changing 2K to 4K in line 33 of "RunRPICamera.py" changes the resolution.
-   - While not a trivial fix, the likely solution to this would be to upgrade to a more powerful processor. Options might include the Raspberry pi 5 (32GB), Factor 201 Raspberry pi, NVIDIA Jetson, or Intel NUC. For many of these, an alternate way of integrating the joystick would be necessary, likely incorporating some kind of USB IO board. 
+   - While not a trivial fix, the likely solution to this would be to upgrade to a more powerful processor. Options might include the Raspberry pi 5 (32GB), Factor 201 Raspberry pi, NVIDIA Jetson, or Intel NUC. For many of these, an alternate way of integrating the joystick would be necessary, likely incorporating some kind of USB IO board.
+  
+6. Temperature control:
+   - While we haven't encountered any issues with the camera in testing, we have noticed that the Raspberry pi and 3D-printed joystick box get very hot after a few hours of use. It would probably be a good idea to add more cooling holes and mount either a heatsink or cooling fan on the Raspberry pi to provide some temperature control
