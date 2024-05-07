@@ -23,16 +23,22 @@ If using with only Raspberry Pi:
 1. Boot-up Raspberry Pi and display
 2. Turn on camera, connect to Raspberry Pi, and set to "livestreaming" via the mode button (should already be set)
 3. Download program "Joystick.py"
-4. Download and run program "opencv_livecam" (*Note that you may have to change the camera port on line 
+4. Download and run program "RunRPICamera"
 
 If using with PC and Raspberry Pi (For slightly less latency)
 1. Boot-up PC, Raspberry Pi, and Display
 2. Temporarily connect Display to Raspberry Pi
 3. Turn on camera, connect to PC, and set to "livestreaming" via the mode button (should already be set)
 4. Download program "Joystick.py"
-5. Download and run program "--" on Raspberry Pi
+5. Download and run program "RunRPICamera" on Raspberry Pi
 6. Disconnect monitor from Raspberry Pi and reconnect to PC
 7. Download and run program "frompi.py" on Monitor
+
+If using with PC (keyboard instead of Joystick inputs)
+1. Boot-up PC and display
+2. Turn on camera, connect to Raspberry Pi, and set to "livestreaming" via the mode button (should already be set)
+3. Download program "Joystick.py"
+4. Download and run program "opencv_livecam_test" (May require changing port in line 6)
 
 Recorded footage
 1. Record 360 footage with Ricoh Theta V or any other 360 camera
@@ -65,9 +71,9 @@ Recorded footage
    - Another option we explored was to use USB to ethernet adaptors to send the signal 30+ feet. While this works with some latency with the PC, this introduced too much latency for the LIBUVC library to work with Raspberry Pi. Doing some research, there are more expensive adaptors that exist for exactly this application (webcams, etc.). These products are in the $500-1000 range, however. But if an ethernet cable is desired, it did seem like they should work (Icron Ranger 2311).
 
 4. New interface:
-   - Currently, there is not an interface to switch between live video and stored footage. This is currently accomplished by commenting out lines in the main "__________" file that selects which input is fed into the VideoCapture object.
+   - Currently, there is not an interface to switch between live video and stored footage. This is currently accomplished by commenting out lines in the main "RunRPICamera.py" file that selects which input is fed into the VideoCapture object.
    - Depending on the Aquarium's needs, it may be nice to have a menu that pops up when the program is initiated. This menu would likely include the option to toggle between live and recorded footage. Additionally, this menu could allow the Aquarium to select exactly which piece of recorded footage they would like to play, or even give them the option to place recorded footage in a queue to play.
   
 5. Upgraded resolution:
-   - To me, the biggest upgrade that could be made to this exhibit would be increasing the resolution of the camera. The camera supports 4K resolution, but I found that the Raspberry Pi processer is too slow to display the 4K resolution which is why the software is currently configured for 2K video. At 4K, the frame rate of the footage becomes very slow, decreasing to somewhere between 2-10 frames per second. The resolution itself is very easy to change; simply changing 2K to 4K in line ____ of ____ changes the resolution.
+   - To me, the biggest upgrade that could be made to this exhibit would be increasing the resolution of the camera. The camera supports 4K resolution, but I found that the Raspberry Pi processer is too slow to display the 4K resolution which is why the software is currently configured for 2K video. At 4K, the frame rate of the footage becomes very slow, decreasing to somewhere between 2-10 frames per second. The resolution itself is very easy to change; simply changing 2K to 4K in line 33 of "RunRPICamera.py" changes the resolution.
    - While not a trivial fix, the likely solution to this would be to upgrade to a more powerful processor. Options might include the Raspberry pi 5 (32GB), Factor 201 Raspberry pi, NVIDIA Jetson, or Intel NUC. For many of these, an alternate way of integrating the joystick would be necessary, likely incorporating some kind of USB IO board. 
