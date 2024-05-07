@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from cv2 import dnn_superres
 
-# Connect to Theta V (port 3 on Jaechan's computer)
+# Connect to Theta V (May need to change port)
 capture = cv2.VideoCapture(2)
 if not capture.isOpened():
     print("Cannot open camera")
