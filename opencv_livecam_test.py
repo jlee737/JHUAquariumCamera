@@ -12,7 +12,9 @@ if not capture.isOpened():
 # Create an SR object
 #upsample_factor = 2
 #sr = dnn_superres.DnnSuperResImpl_create()
-#sr.readModel(r"C:\Users\Jaechan Lee\Desktop\JHU\__SP24\MultiD_AquariumProject\Upscaling\FSRCNN-small_x2.pb")
+
+#Insert path to model here:
+#sr.readModel(r"XXXXXXXXXXXXXXXXXXXXXXX")
 #sr.setModel("fsrcnn", upsample_factor)
 
 shift = 0
